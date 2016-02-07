@@ -18,7 +18,5 @@ TheFile = open(myFile, "w")
 TheFile.write(firstLine + " \n")
 TheFile.write(secondLine + " \n") 
 TheFile.write(thirdLine + " \n")
-TheFile.write(myFile)
-
 # Closed the file for the end of the day
 TheFile.close()
