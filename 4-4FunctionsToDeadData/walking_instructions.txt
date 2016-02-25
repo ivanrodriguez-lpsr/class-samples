@@ -1,0 +1,4 @@
+Pick up foot
+Move leg forward
+Put down foot
+Switch legs and repeat
