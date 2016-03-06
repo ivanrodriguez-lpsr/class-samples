@@ -13,14 +13,15 @@ class Player(object):
     print("Jersey Number:" + self.JerseyNumber)
     print("Position:" + self.Position)
 
-# this function opens a file, writes to the file and saves the file that you have
+
+# this functipo
 def savefile(playerList, filename):
 	TheFile = open(filename, "a")
 	for info in playerList:
 		TheFile.write(info.name + " " + info.age + " " + info.goals + " " + info.JerseyNumber +" " + info.Position + "\n")
 	TheFile.close()
 
-# This function here creates an empty list so that you can load up previous players and then it appends the previous players to the list
+
 def loadfile(filename):
 	emptyList = []
 	myFile = open(filename, "r")
@@ -34,7 +35,7 @@ def loadfile(filename):
 	return emptyList
 
 
-# Asks the user if they have a previous file then it loads is using the load function, otherwise it's a new list
+# creates new list
 print("Press 1 to start with a new team or 2 to load an old file you had")
 user_choice = raw_input()
 
@@ -48,6 +49,7 @@ else:
 # introduces the code
 print("Welcome! Do you wish to add a player to ShawnHigh scoccer team or would you like to view the players?")
 print("Enter 1 to add player or enter 2 to view them, 3 to save the file, 0 to get out.")
+
 
 
 # creates an option that the user will input
@@ -77,10 +79,7 @@ while option != "0":
     
     # will add the new player to the list and then ask the user if they want to change the input that they had.
     myPlayers.append(Player(name, age, goals, JerseyNumber, Position))
-    print("Done! Do you want to 1, add another player")
-    print("2 to see the players,")
-    print("3 to save the file.")
-    print("0 to get out")
+    print("Done! Do you want to 1, add another player or do you want 2, to see the players, 3 to save the file. Press 0 to get out")
     option = raw_input()
   
   # If the option that the user inputs is a 2 it will print through this block of code and will print the whole list that it has then it gives the user another option to change the option. 
@@ -88,16 +87,12 @@ while option != "0":
     print("okay looks like you want to see the players.")
     for information in myPlayers:
         information.printStats()
-    print("What do you want to do now?")
-    print(" 1 to add another player")
-    print(" 2 to see the players again.")
-    print(" 3 to save the file ")
-    print(" 0 the get out")
+    print("What do you want to do now? 1 to add another player or 2 to see the players again. Press 0 to get out")
     option = raw_input()
    
-# this option allows the player to save the files that they want oo and then it closes the program
+
   elif option == "3":	 
-	print("Please pick a file name and add '.txt' to the end of the file. If this is a previous file please add a new name")
+	print("Please pick a file name and add '.py' tp the end of the file")
 	filename = raw_input()
 	savefile(myPlayers, filename)
 	option = "0"
