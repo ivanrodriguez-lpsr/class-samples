@@ -1,5 +1,3 @@
-
-
 #takes num, an integer
 # returns true if num is prime
 #returns false if num is composite
@@ -9,13 +7,6 @@ def isPrime(num):
 			return False
 	return True
 
-# This line will test if the nuber is true or not			
-print("This should be true:")
-# Test wha the number is using the function
-print(isPrime(11))
-# The next two lines will do the same as the previous two
-print("This should be false:")
-print(isPrime(9))
 
 # Creates an empty list so that it can print the numbers all at once that are prime
 primeList = []
@@ -24,7 +15,12 @@ for n in range(2,10000):
 	x = isPrime(n)
 	if x == True:
 		primeList.append(n)
+# This opens a file
 myFile = open("PrimeList", "w")
+#  this writes to the file
 myFile.write(str(primeList) + "\n")
+# This closes the file
 myFile.close()
+# prints the numbers
+print(primeList)
 
