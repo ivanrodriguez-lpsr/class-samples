@@ -9,6 +9,7 @@ while choice != 0:
 	print("1) To add a new contact.")
 	print("2) To search for a contact")
 	print("3) Print all contacs")
+	print("4) Delete contact")
 	print("0) Exit out")
 	
 	
@@ -31,3 +32,7 @@ while choice != 0:
 	if choice == 3:
 		print(myContacts)
 
+	if choice == 4:
+		print("Which one")
+		delete = raw_input()
+		del phoneBook[delete]
