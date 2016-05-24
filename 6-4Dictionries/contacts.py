@@ -10,6 +10,7 @@ while choice != 0:
 	print("2) To search for a contact")
 	print("3) Print all contacs")
 	print("4) Delete contact")
+	print("5) Edit a previous contact")
 	print("0) Exit out")
 	
 	
@@ -31,8 +32,17 @@ while choice != 0:
 	# prints the contacts
 	if choice == 3:
 		print(myContacts)
-
+	# deletes a contact by retreiving it from the list
 	if choice == 4:
-		print("Which one")
-		delete = raw_input()
-		del phoneBook[delete]
+		print("Which one?")
+		name = raw_input()
+		del myContacts[name]
+
+	# this here allows them to edit a contact
+	if choice == 5:
+		print("Whos number would you like to edit?")
+		name = raw_input()
+		print("Okay now print the number")
+		number = raw_input()
+		myContacts[name] = number
+		print("Okay done.")
